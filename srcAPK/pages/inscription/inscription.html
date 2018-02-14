@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Inscription</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content  padding >
+    <ion-list>
+        <ion-item>
+          <ion-label stacked>Nom</ion-label>
+          <ion-input type="text" [(ngModel)]="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Prenom</ion-label>
+            <ion-input type="text" [(ngModel)]="lastName"></ion-input>
+        </ion-item>
+
+        <ion-item class="card-background-page">
+            <ion-card>
+                <img src="{{image}}"/>
+            </ion-card>
+        </ion-item>
+        <ion-item class="position">
+            <button ion-button (click)="takePhoto()">Take photo</button>
+            <button ion-button (click)="getImageGallery()">gallery</button>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Mail</ion-label>
+            <ion-input type="email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Sexe</ion-label>
+            <ion-select [(ngModel)]="gender">
+              <ion-option value="female">Female</ion-option>
+              <ion-option value="male">Male</ion-option>
+            </ion-select>
+          </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Date de naissance</ion-label>
+            <ion-datetime displayFormat="DD/MMM/YYYY" [(ngModel)]="date"></ion-datetime>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label stacked>mot de passe</ion-label>
+          <ion-input type="password" [(ngModel)]="pwd"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Confirmez votre mot de passe</ion-label>
+            <ion-input type="password" [(ngModel)]="pwdConfirm"></ion-input>
+          </ion-item>
+
+        <div padding>
+            <button (tap)="checkInscription()" ion-button round>S'inscrire</button>
+        </div>
+      </ion-list>
+</ion-content>

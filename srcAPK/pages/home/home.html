@@ -1,0 +1,32 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/imgs/heart.png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
+
+<ion-content >
+  <ion-slides class="Slide" pager>
+      <ion-slide >
+        <img src="assets/imgs/slide1.png">
+      </ion-slide>
+
+      <ion-slide >
+        <img src="assets/imgs/slide2.png">
+      </ion-slide>
+    
+      <ion-slide>
+          <img src="assets/imgs/slide3.png">
+      </ion-slide>
+  </ion-slides>
+  <ion-list>
+    <div class="buttonFB">
+      <button (tap)="login()" ion-button full round>SE CONNECTER</button>
+    </div>
+    <div class="buttonFB">
+      <button (tap)="goInscription()" ion-button full round>S'INSCRIRE</button>
+    </div>
+  </ion-list>
+</ion-content>

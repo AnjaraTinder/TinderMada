@@ -1,0 +1,53 @@
+<!--
+  Generated template for the ConfigurationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content >
+  <aside class="profile-card">
+    <header>
+      <!-- here’s the avatar -->
+      <a>
+        <img src="{{user.imageUrl}}" class="hoverZoomLink">
+      </a>
+      <!-- the username -->
+      <h1>{{user.name}}</h1>
+      <!-- and role or location -->
+    </header>
+    <div class="profile-bio" (tap)="reglage()">
+        <ion-grid>
+            <ion-row>
+              <ion-col col-12>
+                  <button large="true" color="anjara" ion-button icon-only>
+                      <ion-icon color="anjaraGris" name="md-settings"></ion-icon>
+                  </button>
+              </ion-col>
+              <ion-col col-12>
+                Réglages
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+    </div>
+      <!-- bit of a bio; who are you? -->
+  </aside>
+</ion-content>
+<ion-footer>
+  <div class="kely" >
+    <ion-slides  autoplay="1000" loop="true">
+      <ion-slide>
+         <h2>Swipez</h2>
+      </ion-slide>
+
+      <ion-slide >
+        <h2>Matchez</h2>
+      </ion-slide>
+        
+      <ion-slide >
+        <h2>Tchatez</h2>
+      </ion-slide>
+        
+    </ion-slides>
+  </div>
+</ion-footer>
